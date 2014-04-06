@@ -1,0 +1,29 @@
+<html>
+<head>
+<!-- PUT THIS IN HEAD SECTION of Script Portlet -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- END OF HEAD SECTION -->
+
+<!-- APPLICATION JS AND CSS: copy the contents of these files into the JS and CSS sections of Script Portlet -->
+<script src="prp_set.js"></script>
+</head>
+
+<body>
+	<!-- PUT THIS IN HTML SECTION of Script Portlet -->
+	<div>
+		<h2 class="blockHeading">Set Public Render Parameter</h2>
+	</div>
+	<form id="form1" action='[Plugin:RenderUrl copyCurrentParams="true"]' method="get">
+
+		<label for="customerSelect">Select customer:</label> <select name="CUSTOM_CONTEXT" id="customerSelect">
+		</select>
+
+		<!-- submit button -->
+		<button type="submit">Submit</button>
+	</form>
+	<hr />
+
+	<!-- END OF HTML SECTION -->
+</body>
+
+</html>

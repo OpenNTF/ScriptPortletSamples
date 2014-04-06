@@ -1,0 +1,55 @@
+.customerOverviewRightTop {
+  text-align: right;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  text-align: right;
+  font-size: 1.2em;
+}
+.customerOverviewRightBottom {
+position: absolute;
+right: 15px;
+bottom: 20px;
+text-align: right;
+}
+
+.customerOverview {
+  padding: 20px 15px;
+  position: relative;
+  height: 110px;
+}
+.customerOverview .name {
+  font-size: 1.8em;
+}
+.customerOverview .status {
+}
+.customerOverview .balance {
+  font-size: 2em;
+}
+.customerOverview .id {
+}
+.customerOverview .button {
+}
+
+.print {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+   border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-weight: lighter;
+  padding: 3px 10px 4px;
+}
+.blue {
+  background:#0085cc;
+  background-image: -moz-linear-gradient(top,#65b3de,#3aa3dd);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#65b3de),to(#3aa3dd)   );
+}
+.blue:hover{background:#3aa3dd; }
+
+.nodata {
+    font-size: 1.2em;
+    margin-top: 40px;
+    text-align: center;
+}

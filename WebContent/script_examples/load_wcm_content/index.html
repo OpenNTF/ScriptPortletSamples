@@ -1,0 +1,22 @@
+<html>
+<head>
+<!-- PUT THIS IN HEAD SECTION of Script Portlet -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- END OF HEAD SECTION -->
+
+<!-- APPLICATION JS AND CSS: copy the contents of these files into the JS and CSS sections of Script Portlet -->
+<body>
+	<!-- PUT THIS IN HTML SECTION of Script Portlet -->
+	<div>
+		<h2 class="blockHeading">Loading WCM Content from JS</h2>
+
+		<input type="text" id="myfile" value="sample%20article"> <input
+			type="button"
+			onclick="$('#wcmdoc').load('/wps/wcm/myconnect/web%20content/articles/'+ $('#myfile').val());"
+			value="loadfile">
+		<div id="wcmdoc"></div>
+	</div>
+	<!-- END OF HTML SECTION -->
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+#################
+## Web Experience Factory
+#################
+.deployment
+.classpath
+.settings
+.project
+.bowstreet
+~temp
+dist
+documentation/.*
+
+**/XmlFile*
+**/xml_file_data_service/**
+WebContent/factory
+WebContent/projectDeploy.xml
+WebContent/index.jsp
+WebContent/.excludeFromServer
+WebContent/META-INF/
+WebContent/WEB-INF
