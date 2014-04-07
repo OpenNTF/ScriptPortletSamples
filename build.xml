@@ -6,16 +6,14 @@ Build file for creating Zip Archive
 
   <target name="properties">
     <property file="build.properties" />
-	<property name="sample.name" value="script_application_builder"/>
+	<property name="sample.name" value="script_portlet_samples"/>
     <property name="build.dir" value="."/>
     <property name="dist.dir" value="${build.dir}/dist"/>
     <property name="zip.file"       value="${dist.dir}/${sample.name}.zip" />
-    <property name="download.file"       value="${dist.dir}/${sample.name}_package.zip" />
+    <property name="download.file"       value="${dist.dir}/${sample.name}_download.zip" />
 
     <property name="webcontent.dir" value="${build.dir}/WebContent"/>
     <property name="webinf.dir"     value="${webcontent.dir}/WEB-INF"/>
-    <property name="models.dir"     value="${webcontent.dir}/WEB-INF/models"/>
-    <property name="source.dir"     value="${webcontent.dir}/WEB-INF/work/source"/>
     <property name="documentation.dir" value="${build.dir}/documentation"/>
   </target>
 
@@ -49,13 +47,8 @@ Build file for creating Zip Archive
   <target name="makezips" depends="properties">
 
     <zip destfile="${zip.file}">
-      <zipfileset dir="${webcontent.dir}">
-        <include name="WEB-INF/samples/scripting/**"/>
-        <include name="samples/scripting/**"/>
-        <include name="samples/script_builder/**"/>
-        <include name="WEB-INF/models/samples/scripting/**"/>
-        <include name="WEB-INF/builders/com/ibm/wef/samples/builders/**"/>
-        <include name="WEB-INF/work/source/com/ibm/wef/samples/builders/ScriptApplication*.*"/>
+      <zipfileset dir="${webcontent.dir}/script_examples">
+        <include name="**"/>
       </zipfileset>
     </zip>
 
