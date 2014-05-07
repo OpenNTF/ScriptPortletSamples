@@ -6,6 +6,7 @@
 .settings
 .project
 .bowstreet
+.metadata
 ~temp
 dist
 documentation/.*
