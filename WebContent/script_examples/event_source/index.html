@@ -17,6 +17,18 @@
 
 <body>
 	<!-- PUT THIS IN HTML SECTION of Script Portlet -->
+	<div>
+		<h3>
+			About this sample</h3>
+		<div>
+			This sample uses jQuery eventing, with bind() and trigger() functions. A list of customers is
+defined in the Customer List portlet, and a click event on each customer is used to fire the
+event by calling trigger() with a queue object. In the details portlet, the bind() function is
+called using the same queue object. When the event is received, it looks up a customer ID
+from the customersData array and updates the display. This code serves as event source.</div>
+		<div>
+			&nbsp;&nbsp;</div>
+	</div>		
 	<h2 class="blockHeading">Customer List</h2>
 	<div id="customerList"></div>
 	<!-- END OF HTML SECTION -->
