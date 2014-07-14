@@ -77,6 +77,9 @@ Build file for creating Zip Archive
 	  <zipfileset dir="${webcontent.dir}/script_examples/jquery_datatables">
         <include name="*.zip" />		
       </zipfileset>
+	  <zipfileset dir="${webcontent.dir}/script_examples/wcm_tag_samples">
+        <include name="*.zip" />		
+      </zipfileset>
 	</zip>
 
   </target> 

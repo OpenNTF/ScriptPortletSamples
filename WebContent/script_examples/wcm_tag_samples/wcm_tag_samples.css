@@ -1,0 +1,7 @@
+#tags_table td, th {
+  min-width: 100px;
+  text-align: left;
+   border: 1px solid gray;
+   padding: 3px;
+}
+
