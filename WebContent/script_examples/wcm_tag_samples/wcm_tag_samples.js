@@ -16,11 +16,9 @@ function displayDataTable(data, tableId) {
   	  // add columns
   	      $.each( rowData, function( index2, columnData) {      
   	        data = data + '  <td>' + columnData + '</td>';
-	   	console.log("columnData: " + columnData);
 	      });   
 
 	  data = data + '</tr>';
- 	console.log("rowData: " + rowData);
         items.push( data );
     });   
       
