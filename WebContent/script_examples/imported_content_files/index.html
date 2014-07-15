@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Imported Content Sample</title>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+	<div>
+		<h3>
+			About this sample</h3>
+		<div>
+<p>This sample shows the use of imported content: an image, a JSON data file, and an HTML fragment.   All are loaded via Ajax calls.
+Each of these files is referenced with a relative link in the index.html page, and each relative link is replaced by a WCM Element tag when imported.   The WCM element name is the same as the relative pathname.  The JSON file and the HTML fragment are loaded by the application JavaScript code, and the URLs are read from the hidden "a" tags that are in the index.html file.
+</p>
+<p>
+Note: The Javascript that loads the HTML fragment and the JSON file may not run standalone (from the file system) in some browsers due to security restriction.
+</p>
+</div>
+		<div>
+			&nbsp;&nbsp;</div>
+	</div>
+	<h2 class="blockHeading">Imported Content Files</h2>
+
+<div class="multi_file_test">
+<h3>Imported Image</h3>
+<img src="images/skiing.jpg" alt="Imported Image" id="importedImage">
+
+<h3>HTML Fragment Loaded by JS</h3>
+<div id="htmlFragment" style="background-color:#CCCCCC; padding:8px">
+<span>replace this text with html fragment</span>
+</div>
+
+<h3>JSON Data Loaded by JS</h3>
+<table border="1">
+<thead>
+<tr><th>Name</th><th>Address</th><th>City</th></tr>
+</thead>
+<tbody id="tableBody" >
+</tbody>
+</table>
+
+</div>
+
+<!--
+  Hidden links, with URLs to app-relative artifacts.
+  These URLs are used by Javascript code below to fetch the additional HTML fragment and JSON artifacts.
+  During Import, the importer replaces these URLs with WCM markup like
+    [Element format="URL" context="current" type="content" key="relativepath"]
+  which in turn is processed by the Script Portlet's WCM Rendering Portlet instance,
+  to generate actual WCM URLs to the content item elements at render time.
+-->
+<div style="display:none">
+  <a id="sampleFragmentUrl" href="html/testFragment.html" />
+  <a id="customerDataJsonUrl"     href="json/customerData.json" />
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+</body>
+
+</html>
