@@ -1,56 +1,62 @@
 <html>
-  <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+<head>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="portlet_prefs.css">
-
-  </head>
-  <body>
 <script type="text/javascript" src="portlet_prefs.js"></script>
+<script type="text/javascript">var spInstance=[Plugin:Portlet key="namespace" compute="once"]spHelper;</script>
+</head>
+<body>
 	<div>
-		<h3>
-			About this sample</h3>
-		<div>
-			This sample shows how to set and retrieve Portlet preferences. The portlet shows customers list with the Settings option (which is displayed only in when the page is in Edit mode) which lets you customize the columns to display in the table and stores the user's selection in the portlet preference named 'com.ibm.portal.scriptpreference' and then retrieves the preference and respective columns are displayed based on preferences.</div>
-		<div>
-			&nbsp;&nbsp;</div>
-	</div>		
+		<h3>About this sample</h3>
+		<div>This sample shows how to set and retrieve Portlet
+			preferences. The portlet shows customers list with the Settings
+			option (which is displayed only in when the page is in Edit mode)
+			which lets you customize the columns to display in the table and
+			stores the user's selection in the portlet preference using the preference api
+			and then uses the api to retrieve the preference
+			and respective columns are displayed based on preferences.</div>
+		<div>&nbsp;&nbsp;</div>
+	</div>
 
 	<div>
-        <h2 class="blockHeading">Portlet Preferences Sample</h2>
+		<h2 class="blockHeading">Portlet Preferences Sample</h2>
 	</div>
-<input type="hidden" id="prefUrl" name="prefUrl" value="[Plugin:RenderUrl uriMode="download" uri="[Plugin:Portlet pocURI='preferences:all' key='uri']"]" />
-  <button class="hide_in_view_mode" id="showPrefDialog" value="Set Preference">Settings</button>
-  
-<div id="prefDialog">
-<form>
-<input type="checkbox" id="idCol" value="id">ID<br>
-<input type="checkbox" id="nameCol">Name<br>
-<input type="checkbox" id="balanceCol">Balance<br>
-<input type="checkbox" id="cityCol">City<br>
-<input type="checkbox" id="phoneCol">Phone<br>
-<input type="checkbox" id="statusCol">Status<br>
-<input type="checkbox" id="updatedCol">Updated<br>
-<input type="checkbox" id="addressCol">Address<br>
- 
-  <br>
-  <button type="button" id="setPreference" name="setPreference">Save</button>
-  </form>
-</div>    
-  
-  
-	<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="customerListTable">
+	<button class="hide_in_view_mode" id="showPrefDialog"
+		value="Set Preference" style="margin-bottom: 15px;">Settings</button>
+
+	<div id="prefDialog">
+		<form>
+			<input type="checkbox" id="idCol" value="id">ID<br> <input
+				type="checkbox" id="nameCol">Name<br> <input
+				type="checkbox" id="balanceCol">Balance<br> <input
+				type="checkbox" id="cityCol">City<br> <input
+				type="checkbox" id="phoneCol">Phone<br> <input
+				type="checkbox" id="statusCol">Status<br> <input
+				type="checkbox" id="updatedCol">Updated<br> <input
+				type="checkbox" id="addressCol">Address<br> <br>
+			<button type="button" id="setPreference" name="setPreference">Save</button>
+			<button type="button" id="cancelPreference" name="cancelPreference">Cancel</button>
+		</form>
+	</div>
+
+
+	<table  class="dataTable"
+		id="customerListTable">
 		<thead>
 			<tr>
 				<th id="idHeader">ID</th>
 				<th id="nameHeader">Name</th>
-              	<th id="balanceHeader">Balance</th>              	
+				<th id="balanceHeader">Balance</th>
 				<th id="cityHeader">City</th>
-               	<th id="phoneHeader">Phone</th>
-              	<th id="statusHeader">Status</th>
-              	<th id="updatedHeader">Updated</th>
-              <th id="addressHeader">Address</th>
+				<th id="phoneHeader">Phone</th>
+				<th id="statusHeader">Status</th>
+				<th id="updatedHeader">Updated</th>
+				<th id="addressHeader">Address</th>
 			</tr>
 		</thead>
 		<!-- tbody is populated by JS code
@@ -58,6 +64,16 @@
 	</tbody>
 	 -->
 	</table>
-
-  </body>
+<!--
+  Hidden links, with URLs to app-relative artifacts.
+  These URLs are used by Javascript code below to fetch the additional JSON artifacts.
+  During Import, the importer replaces these URLs with WCM markup like
+    [Element format="URL" context="current" type="content" key="relativepath"]
+  which in turn is processed by the Script Portlet's WCM Rendering Portlet instance,
+  to generate actual WCM URLs to the content item elements at render time.
+-->
+<div style="display:none">
+  <a id="customerDataJsonUrl"    href="json/customerData.json" ></a>
+</div>
+</body>
 </html>

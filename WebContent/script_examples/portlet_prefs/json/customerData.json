@@ -1,15 +1,5 @@
-/*
- * Copyright 2014  IBM Corp.
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0 
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
-*/
-// The customer data, used by both list and details components
-// Customer data
-var customersData = [ {
+[
+ {
 	"id" : "2143",
 	"name" : "Samantha Daryn",
 	"status" : "Standard",
@@ -17,9 +7,10 @@ var customersData = [ {
 	"balance" : "$2,350.00",
 	"address" : "2001 West Rd.",
 	"city" : "Salisbury",
-	"phone" : "212-555-9876",
+	"phone" : "212-555-9876"
 
-}, {
+ },
+ {
 	"id" : "2144",
 	"name" : "Lucille Suarez",
 	"status" : "Preferred",
@@ -27,8 +18,9 @@ var customersData = [ {
 	"balance" : "$1,050.00",
 	"address" : "123 Main St",
 	"city" : "Concord",
-	"phone" : "303-555-2435",
-}, {
+	"phone" : "303-555-2435"
+ },
+ {
 	"id" : "2145",
 	"name" : "Amar Srivastava",
 	"status" : "Inner Circle",
@@ -36,8 +28,9 @@ var customersData = [ {
 	"balance" : "$7,235.00",
 	"address" : "South Mill Pond Ave.",
 	"city" : "Sherman Oaks",
-	"phone" : "506-555-1212",
-}, {
+	"phone" : "506-555-1212"
+ },
+ {
 	"id" : "2146",
 	"name" : "Ted Amado",
 	"status" : "Standard",
@@ -45,8 +38,9 @@ var customersData = [ {
 	"balance" : "$1,030.00",
 	"address" : "44 Center St.",
 	"city" : "Sydney",
-	"phone" : "303-555-1234",
-}, {
+	"phone" : "303-555-1234"
+ },
+ {
 	"id" : "2147",
 	"name" : "Dan Misawa",
 	"status" : "Preferred",
@@ -54,8 +48,9 @@ var customersData = [ {
 	"balance" : "$1,300.00",
 	"address" : "1204 Mountain Boulevard",
 	"city" : "Canterbury",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2148",
 	"name" : "Frank Adams",
 	"status" : "Preferred",
@@ -63,8 +58,9 @@ var customersData = [ {
 	"balance" : "$3,440.00",
 	"address" : "133 Rock Boulevard",
 	"city" : "Denver",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2149",
 	"name" : "Steve Williams",
 	"status" : "Preferred",
@@ -72,8 +68,9 @@ var customersData = [ {
 	"balance" : "$1,110.00",
 	"address" : "1 Circle Lane",
 	"city" : "San Jose",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2150",
 	"name" : "Ron Espinosa",
 	"status" : "Standard",
@@ -81,8 +78,9 @@ var customersData = [ {
 	"balance" : "$7,670.00",
 	"address" : "2425 Mountain Rd.",
 	"city" : "Dublin",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2151",
 	"name" : "Ed El-Amon",
 	"status" : "Standard",
@@ -90,8 +88,9 @@ var customersData = [ {
 	"balance" : "$1,800.00",
 	"address" : "26B Seiching Road",
 	"city" : "Beijing",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2152",
 	"name" : "Pierre Dumont",
 	"status" : "Preferred",
@@ -99,8 +98,9 @@ var customersData = [ {
 	"balance" : "$2,350.00",
 	"address" : "Paradise Lane",
 	"city" : "Pittsburgh",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2153",
 	"name" : "Gardner Raynes",
 	"status" : "Preferred",
@@ -108,8 +108,9 @@ var customersData = [ {
 	"balance" : "$1,222.00",
 	"address" : "4 Technology Drive",
 	"city" : "Westford",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2154",
 	"name" : "Dennis Michaels",
 	"status" : "Standard",
@@ -117,8 +118,9 @@ var customersData = [ {
 	"balance" : "$3,000.00",
 	"address" : "155 W. 67 St.",
 	"city" : "New York",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2155",
 	"name" : "Suzanne Miles",
 	"status" : "Preferred",
@@ -126,8 +128,9 @@ var customersData = [ {
 	"balance" : "$9,800.00",
 	"address" : "23 S. Main St.",
 	"city" : "Durham",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2156",
 	"name" : "Betty Zechman",
 	"status" : "Inner Circle",
@@ -135,8 +138,9 @@ var customersData = [ {
 	"balance" : "$7,540.00",
 	"address" : "1445 West Highway",
 	"city" : "Raleigh",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2157",
 	"name" : "Jasmine Haj",
 	"status" : "Standard",
@@ -144,8 +148,9 @@ var customersData = [ {
 	"balance" : "$5,000.00",
 	"address" : "15498 Central Ave",
 	"city" : "Houston",
-	"phone" : "601-555-8888",
-}, {
+	"phone" : "601-555-8888"
+ },
+ {
 	"id" : "2158",
 	"name" : "Charlie Hamilton",
 	"status" : "Preferred",
@@ -153,19 +158,6 @@ var customersData = [ {
 	"balance" : "$1,202.00",
 	"address" : "5150 S. Michigan Ave.",
 	"city" : "Detroit",
-	"phone" : "601-555-8888",
-}
-
-];
-
-// Function called by jQuery when DOM has finished loading - display list of customers
-$(function() {
-	var options = $("#customerSelect");
-    $.each( customersData, function( key,value ) {
-    	options.append($("<option />").val(value.id).text(value.name));
-	});
-  	if (currentId != '') {
-  		$('#customerSelect').val(currentId);
-	}
-});
-
+	"phone" : "601-555-8888"
+ }
+]

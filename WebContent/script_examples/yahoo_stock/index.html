@@ -1,0 +1,89 @@
+<html>
+  <head>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script><link rel="stylesheet" type="text/css" href="yahoo_stock.css">
+<script type="text/javascript"
+	src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+  <script type="text/javascript">var spYahooInstance=[Plugin:Portlet key="namespace" compute="once"]spHelper;</script>
+   </head>
+  <body>
+ <script type="text/javascript" src="yahoo_stock.js"></script>
+<div>
+	<div>
+		<h3>About this sample</h3>
+		<div>This sample shows how to set and retrieve Portlet
+			preferences. The portlet shows a list of stock quotes with the Settings
+			option (which is displayed only in when the page is in Edit mode)
+			which lets you customize the stocks to display in the table and
+			stores the user's selection in the portlet preference using the preference api
+			and then uses the api to retrieve the the users selected stocks which are displayed based on preferences.</div>
+		<div>&nbsp;&nbsp;</div>
+	</div>
+    <h2 class="blockHeading">Yahoo Stocks</h2>
+	<button class="hide_in_view_mode" id="showYahooDialog"
+		value="Set Preference" style="margin-bottom: 15px;">Settings</button>
+
+	<div id="yahooDialog" >
+		<form>
+			<table>
+			<thead>
+				<tr><td colspan=2><p>Enter up to 10 symbols and titles for stocks you want to track.</p></td></tr>
+				<tr>
+					<th style="border:none">Symbol</th><th style="border:none">Title</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input id="symbol1"></td>
+					<td><input id="title1"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol2"></td>
+					<td><input id="title2"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol3"></td>
+					<td><input id="title3"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol4"></td>
+					<td><input id="title4"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol5"></td>
+					<td><input id="title5"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol6"></td>
+					<td><input id="title6"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol7"></td>
+					<td><input id="title7"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol8"></td>
+					<td><input id="title8"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol9"></td>
+					<td><input id="title9"></td>
+				</tr>
+				<tr>
+					<td><input id="symbol10"></td>
+					<td><input id="title10"></td>
+				</tr>
+			</tbody>
+			</tbody>
+					
+			</table>
+			<button type="button" id="setYahooPreference" name="setPreference">Save</button>
+			<button type="button" id="cancelYahooPreference" name="cancelPreference">Cancel</button>
+			<button type="button" id="restoreYahooPreference" name="restorePreference">Restore to initial</button>
+		</form>
+	</div>
+</div>
+    <div id="quotesWrapper"></div>
+  </body>
+</html>

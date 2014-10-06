@@ -19,7 +19,6 @@ var findById = function(customerArray, id) {
 
 //Function called by jQuery when DOM has finished loading
 $(function() {
-  	var id = '[Plugin:RenderParam key="CUSTOM_CONTEXT"]';
 	  // console.log("id: " + id);
 	  data = findById(customersData, id);
 	  // console.log("data: " + data);
