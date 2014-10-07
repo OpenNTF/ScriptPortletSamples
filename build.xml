@@ -82,10 +82,7 @@ Build file for creating Zip Archive
 	  <zipfileset dir="${webcontent.dir}/script_examples/wcm_tag_samples">
         <include name="*.zip" />		
       </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/imported_content_files">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/yahoo_stock">
+      <zipfileset dir="${webcontent.dir}/script_examples/imported_content_files">
         <include name="*.zip" />		
       </zipfileset>
 	</zip>
