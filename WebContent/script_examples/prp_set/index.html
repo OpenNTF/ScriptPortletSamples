@@ -5,14 +5,17 @@
 </head>
 
 <body>
-<script type="text/javascript">    var currentId = '[Plugin:RenderParam key="CUSTOM_CONTEXT"]';
-</script>
+	<script type="text/javascript">
+		var currentId = '[Plugin:RenderParam key="CUSTOM_CONTEXT"]';
+	</script>
 	<div>
 		<h2 class="blockHeading">Set Public Render Parameter</h2>
 	</div>
-	<form id="form1" action='[Plugin:RenderUrl copyCurrentParams="true"]' method="get">
+	<form id="form1" action='[Plugin:RenderUrl copyCurrentParams="true"]'
+		method="get">
 
-		<label for="customerSelect">Select customer:</label> <select name="CUSTOM_CONTEXT" id="customerSelect">
+		<label for="customerSelect">Select customer:</label> <select
+			name="CUSTOM_CONTEXT" id="customerSelect">
 		</select>
 
 		<!-- submit button -->

@@ -1,34 +1,27 @@
 <html>
 <head>
 
-<!-- APPLICATION JS AND CSS -->
 <link rel="stylesheet" type="text/css" href='event_target.css'>
 <script src="event_target.js"></script>
 </head>
 
-</head>
-
-
 <body>
-	<!-- HTML SECTION -->
 	<div>
-		<h3>
-			About this sample</h3>
-		<div>
-			This sample uses jQuery eventing, with bind() and trigger() functions. A list of customers is
-defined in the Customer List portlet, and a click event on each customer is used to fire the
-event by calling trigger() with a queue object. In the details portlet, the bind() function is
-called using the same queue object. When the event is received, it looks up a customer ID
-from the customersData array and updates the display. This code serves as event target.</div>
-		<div>
-			&nbsp;&nbsp;</div>
-	</div>	
+		<h3>About this sample</h3>
+		<div>This sample uses jQuery eventing, with bind() and trigger()
+			functions. A list of customers is defined in the Customer List
+			portlet, and a click event on each customer is used to fire the event
+			by calling trigger() with a queue object. In the details portlet, the
+			bind() function is called using the same queue object. When the event
+			is received, it looks up a customer ID from the customersData array
+			and updates the display. This code serves as event target.</div>
+		<div>&nbsp;&nbsp;</div>
+	</div>
 	<h2 class="blockHeading">Customer Details</h2>
 	<div id="customerOverview" class="customerOverview">
 		<div class="nodata">Please select an entry to the left</div>
 	</div>
 	<div class="customerDivider"></div>
-	<!-- END OF HTML SECTION -->
 
 </body>
 

@@ -1,13 +1,16 @@
 <html>
-  <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+<head>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="wcm_tag_samples.css">
 
-  </head>
-  <body>
-<script type="text/javascript">
+</head>
+<body>
+	<script type="text/javascript">
 // tags data
 var wcmTagsSampleData= [
 	["User display name", "[Plugin:EvaluateEL value="${wp.user[wp.themeConfig['user.displaynameattribute']]}"]", "Uses a combination of two EL beans" ],
@@ -26,27 +29,43 @@ var wcmTagsSampleData= [
 
 </script>
 
-<script type="text/javascript" src="wcm_tag_samples.js"></script>
+	<script type="text/javascript" src="wcm_tag_samples.js"></script>
 	<div>
-		<h3>
-			About this sample</h3>
+		<h3>About this sample</h3>
 		<div>
-			This sample shows some of the WCM tags that you can use within HTML elements for a Script Portlet.  You can use WCM tags because a Script Portlet is rendered using the WCM Rendering Portlet.   Note the for the LDAP attributes, the exact LDAP attributes available will depend on your LDAP configuration, so some of the attributes shown here may not always be present.  For more information on WCM tags, see the following links.
+			This sample shows some of the WCM tags that you can use within HTML
+			elements for a Script Portlet. You can use WCM tags because a Script
+			Portlet is rendered using the WCM Rendering Portlet. Note the for the
+			LDAP attributes, the exact LDAP attributes available will depend on
+			your LDAP configuration, so some of the attributes shown here may not
+			always be present. For more information on WCM tags, see the
+			following links.
 			<ul>
-			<li><a target="_blank" href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/help/panel_help/wcm_dev_referencing_tags.dita?lang=en">WCM tags</a></li>
-			<li><a target="_blank" href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/wcm/wcm_dev_renderplugins.dita?lang=en">WCM Plugins</a></li>
-			<li><a target="_blank" href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/wcm/wcm_dev_renderplugins_utils.dita?lang=en">Portlet Plugin</a></li>
-			<li><a target="_blank" href=" http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/social/plrf_rendr_plugin_render_parm.dita?lang=en">RenderParam Plugin</a></li>
-			<li><a target="_blank" href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/social/plrf_rendr_plugin_render_url.dita?lang=en">RenderUrl Plugin</a></li>
-			<li><a target="_blank" href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/dev-theme/themeopt_el_bean.dita?lang=en">EL Beans (for use with Plugin:EvaluateEL)</a></li>
+				<li><a target="_blank"
+					href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/help/panel_help/wcm_dev_referencing_tags.dita?lang=en">WCM
+						tags</a></li>
+				<li><a target="_blank"
+					href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/wcm/wcm_dev_renderplugins.dita?lang=en">WCM
+						Plugins</a></li>
+				<li><a target="_blank"
+					href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/wcm/wcm_dev_renderplugins_utils.dita?lang=en">Portlet
+						Plugin</a></li>
+				<li><a target="_blank"
+					href=" http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/social/plrf_rendr_plugin_render_parm.dita?lang=en">RenderParam
+						Plugin</a></li>
+				<li><a target="_blank"
+					href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/social/plrf_rendr_plugin_render_url.dita?lang=en">RenderUrl
+						Plugin</a></li>
+				<li><a target="_blank"
+					href="http://www-01.ibm.com/support/knowledgecenter/SSHRKX_8.5.0/mp/dev-theme/themeopt_el_bean.dita?lang=en">EL
+						Beans (for use with Plugin:EvaluateEL)</a></li>
 			</ul>
-			</div>
-		<div>
-			&nbsp;&nbsp;</div>
+		</div>
+		<div>&nbsp;&nbsp;</div>
 	</div>
 
 	<div>
-        <h2 class="blockHeading">WCM Tags Sample</h2>
+		<h2 class="blockHeading">WCM Tags Sample</h2>
 	</div>
 
 	<table class="tags_table" id="tags_table">
@@ -54,7 +73,7 @@ var wcmTagsSampleData= [
 			<tr>
 				<th>Tag</th>
 				<th>Example Value</th>
-              	<th>Notes</th>
+				<th>Notes</th>
 			</tr>
 		</thead>
 		<!-- tbody is populated by JS code
@@ -63,5 +82,5 @@ var wcmTagsSampleData= [
 	 -->
 	</table>
 
-  </body>
+</body>
 </html>

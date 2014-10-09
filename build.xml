@@ -65,11 +65,9 @@ Build file for creating Zip Archive
 	  <zipfileset dir="${webcontent.dir}/script_examples/prp_retrieve">
         <include name="*.zip" />		
       </zipfileset>
-      <!--
 	  <zipfileset dir="${webcontent.dir}/script_examples/portlet_prefs">
         <include name="*.zip" />		
       </zipfileset>
-      -->
 	  <zipfileset dir="${webcontent.dir}/script_examples/launch_script">
         <include name="*.zip" />		
       </zipfileset>
