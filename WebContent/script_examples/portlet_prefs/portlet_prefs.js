@@ -44,12 +44,12 @@ function displayDataTable(tableId) {
 				var arrayLength = scriptPref.length;
 				for (var i = 0; i < arrayLength; i++) {
 					if (scriptPref[i] == "false") {
-						var headerSelector = "#" + columnNames[i] + "Header";
+						var headerSelector = "#__SPNS__" + columnNames[i] + "Header";
 						$(headerSelector).css('display', 'none');
 					}
 				}
 				var testDataJSONURL = document
-						.getElementById("customerDataJsonUrl").href;
+						.getElementById("__SPNS__customerDataJsonUrl").href;
 				$.getJSON(testDataJSONURL, function(resp) {
 					var items = [];
 					var data = null;
@@ -65,7 +65,7 @@ function displayDataTable(tableId) {
 						data = data + '</tr>';
 						items.push(data);
 					});
-					$('#' + tableId).append("<tbody></tbody>").append(items);
+					$('#__SPNS__' + tableId).append("<tbody></tbody>").append(items);
 				});
 			}, function(error) {
 				// here you would handle error conditions from getting the
@@ -82,7 +82,7 @@ function displayDataTable(tableId) {
 $(document).ready(function() {
 	// We add the function that displays the preference dialog when the user
 	// presses the settings button
-	$('#showPrefDialog').click(function() {
+	$('#__SPNS__showPrefDialog').click(function() {
 		var scriptPref = [];
 		// here we call the get portlet preference function which returns a
 		// Promise object
@@ -99,10 +99,10 @@ $(document).ready(function() {
 			scriptPref = getPreferences(dataset);
 			var arrayLength = columnNames.length;
 			for (var i = 0; i < arrayLength; i++) {
-				var colId = "#" + columnNames[i] + "Col"
+				var colId = "#__SPNS__" + columnNames[i] + "Col"
 				$(colId).prop('checked', scriptPref[i] == 'true');
 			}
-			$('#prefDialog').dialog({
+			$('#__SPNS__prefDialog').dialog({
 				title : "Select columns"
 			});
 		}, function(error) {
@@ -116,15 +116,15 @@ $(document).ready(function() {
 	});
 	// this adds the code to save the values of the preference dialog
 	// when the Save button is clicked
-	$('#setPreference').click(function() {
+	$('#__SPNS__setPreference').click(function() {
 		var arrayLength = columnNames.length;
 		var preferences = [];
 		for (var i = 0; i < arrayLength; i++) {
-			var colId = "#" + columnNames[i] + "Col"
+			var colId = "#__SPNS__" + columnNames[i] + "Col"
 			preferences[i] = "" + $(colId).prop('checked');
 		}
 		spInstance.setPortletPreferences(preferences).then(function(result) {
-			$('#prefDialog').dialog('close');
+			$('#__SPNS__prefDialog').dialog('close');
 			window.top.location.reload();
 		}, function(error) {
 			// here you would handle error conditions from getting the
@@ -136,8 +136,8 @@ $(document).ready(function() {
 		});
 	});
 	// here we add the function to cancel the preference dialog
-	$('#cancelPreference').click(function() {
-		$('#prefDialog').dialog('close');
+	$('#__SPNS__cancelPreference').click(function() {
+		$('#__SPNS__prefDialog').dialog('close');
 	});
 	// display the table passing in the id of the table element
 	displayDataTable("customerListTable");

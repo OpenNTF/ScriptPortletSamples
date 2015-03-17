@@ -4,87 +4,140 @@ Build file for creating Zip Archive
 -->
 <project name="sample" default="default" basedir=".">
 
-  <target name="properties">
-    <property file="build.properties" />
-	<property name="sample.name" value="script_portlet_samples"/>
-    <property name="build.dir" value="."/>
-    <property name="dist.dir" value="${build.dir}/dist"/>
-    <property name="zip.file"       value="${dist.dir}/${sample.name}.zip" />
-    <property name="download.file"       value="${dist.dir}/${sample.name}_download.zip" />
+	<target name="properties">
+		<property file="build.properties" />
+		<property name="sample.name" value="script_portlet_samples" />
+		<property name="build.dir" value="." />
+		<property name="dist.dir" value="${build.dir}/dist" />
+		<property name="sampleswork.dir" value="${build.dir}/dist/work" />
+		<property name="samplesdist.dir" value="${sampleswork.dir}/samples" />
+		<property name="zip.file" value="${dist.dir}/${sample.name}.zip" />
+		<property name="download.file" value="${dist.dir}/${sample.name}_download.zip" />
 
-    <property name="webcontent.dir" value="${build.dir}/WebContent"/>
-    <property name="webinf.dir"     value="${webcontent.dir}/WEB-INF"/>
-    <property name="documentation.dir" value="${build.dir}/documentation"/>
-  </target>
+		<property name="webcontent.dir" value="${build.dir}/WebContent" />
+		<property name="webinf.dir" value="${webcontent.dir}/WEB-INF" />
+		<property name="documentation.dir" value="${build.dir}/documentation" />
+		<property name="event_source_zip.file" value="${samplesdist.dir}/event_source.zip" />
+		<property name="event_target_zip.file" value="${samplesdist.dir}/event_target.zip" />
+		<property name="hello_world_zip.file" value="${samplesdist.dir}/hello_world.zip" />
+		<property name="imported_content_files_zip.file" value="${samplesdist.dir}/imported_content_files.zip" />
+		<property name="jqplot_chart_zip.file" value="${samplesdist.dir}/jqplot_chart.zip" />
+		<property name="jquery_datatables_zip.file" value="${samplesdist.dir}/jquery_datatables.zip" />
+		<property name="launch_script_zip.file" value="${samplesdist.dir}/launch_script.zip" />
+		<property name="load_wcm_content_zip.file" value="${samplesdist.dir}/load_wcm_content.zip" />
+		<property name="portlet_prefs_zip.file" value="${samplesdist.dir}/portlet_prefs.zip" />
+		<property name="prp_retrieve_zip.file" value="${samplesdist.dir}/prp_retrieve.zip" />
+		<property name="prp_set_zip.file" value="${samplesdist.dir}/prp_set.zip" />
+		<property name="video_file_type_zip.file" value="${samplesdist.dir}/video_file_type.zip" />
+		<property name="wcm_tag_samples_zip.file" value="${samplesdist.dir}/wcm_tag_samples.zip" />
+	</target>
 
-  <target name="default" depends="properties,clean">
-    <antcall target="makedownload"/>
-  </target>
+	<target name="default" depends="properties,clean">
+		<antcall target="makedownload" />
+	</target>
 
-  <target name="clean" depends="properties">
-    <delete dir="${dist.dir}" includes="*.*"/>
-  </target>
+	<target name="clean" depends="properties">
+		<delete dir="${dist.dir}"/>
+	</target>
 
-  <!--  Used to build the download package, including doc and the installable archive. -->
-  <target name="makedownload" depends="properties,makezips">
-    <mkdir dir="${dist.dir}" />
+	<!--  Used to build the download package, including doc and the installable archive. -->
+	<target name="makedownload" depends="properties,makezips">
+		<mkdir dir="${dist.dir}" />
 
-    <zip destfile="${download.file}">
-        <zipfileset dir="${dist.dir}">
-          <include name="${sample.name}.zip" />
-        </zipfileset>
-        <zipfileset dir="${documentation.dir}">
-          <include name="*.pdf"/>
-			<include name="LICENSE"/>
-			<include name="NOTICE"/>
-          <include name="screenshots/**"/>
-        </zipfileset>
-    </zip>
+		<zip destfile="${download.file}">
+			<zipfileset dir="${dist.dir}">
+				<include name="${sample.name}.zip" />
+			</zipfileset>
+			<zipfileset dir="${documentation.dir}">
+				<include name="*.pdf" />
+				<include name="LICENSE" />
+				<include name="NOTICE" />
+				<include name="screenshots/**" />
+			</zipfileset>
+		</zip>
 
-  </target>
-	
-  <!--  Used to build the installable archive. -->
-  <target name="makezips" depends="properties">
+	</target>
 
-    <zip destfile="${zip.file}">
-      <zipfileset dir="${webcontent.dir}/script_examples/event_source">
-        <include name="*.zip" />		
-      </zipfileset>
-    <zipfileset dir="${webcontent.dir}/script_examples/event_target">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/hello_world">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/prp_set">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/load_wcm_content">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/prp_retrieve">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/portlet_prefs">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/launch_script">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/jqplot_chart">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/jquery_datatables">
-        <include name="*.zip" />		
-      </zipfileset>
-	  <zipfileset dir="${webcontent.dir}/script_examples/wcm_tag_samples">
-        <include name="*.zip" />		
-      </zipfileset>
-      <zipfileset dir="${webcontent.dir}/script_examples/imported_content_files">
-        <include name="*.zip" />		
-      </zipfileset>
-	</zip>
+	<!--  Used to build the installable archive. -->
+	<target name="makezips" depends="properties">
+		<copy file="${webcontent.dir}/push_all_samples.bat" todir="${samplesdist.dir}" />
+		<copy todir="${samplesdist.dir}">
+			<fileset dir="${webcontent.dir}/script_examples"/>
+		</copy>
+		<zip destfile="${event_source_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/event_source">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
 
-  </target> 
-  
+		<zip destfile="${event_target_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/event_target">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+
+		<zip destfile="${hello_world_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/hello_world">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${prp_set_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/prp_set">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${prp_retrieve_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/prp_retrieve">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${load_wcm_content_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/load_wcm_content">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${portlet_prefs_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/portlet_prefs">
+				<include name="*.*" />
+				<include name="**/json/*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${launch_script_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/launch_script">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${jqplot_chart_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/jqplot_chart">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${jquery_datatables_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/jquery_datatables">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${wcm_tag_samples_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/wcm_tag_samples">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${imported_content_files_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/imported_content_files">
+				<include name="*.*" />
+				<include name="**/html/*.*" />
+				<include name="**/images/*.*" />
+				<include name="**/json/*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${video_file_type_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/video_file_type">
+				<include name="*.*" />
+			</zipfileset>
+		</zip>
+		<zip destfile="${zip.file}" basedir="${sampleswork.dir}">
+		</zip>
+
+	</target>
+
 </project>
