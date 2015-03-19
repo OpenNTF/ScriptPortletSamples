@@ -61,6 +61,7 @@ Build file for creating Zip Archive
 	<!--  Used to build the installable archive. -->
 	<target name="makezips" depends="properties">
 		<copy file="${webcontent.dir}/push_all_samples.bat" todir="${samplesdist.dir}" />
+		<copy file="${webcontent.dir}/push_all_samples.sh" todir="${samplesdist.dir}" />
 		<copy todir="${samplesdist.dir}">
 			<fileset dir="${webcontent.dir}/script_examples"/>
 		</copy>
