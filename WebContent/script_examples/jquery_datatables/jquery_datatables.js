@@ -184,5 +184,5 @@ function displayDataTable(data, tableId) {
 
 //Function called by jQuery when DOM has finished loading - display list of customers
 $(function() {
-	displayDataTable(customersData, "customerListTable");
+	displayDataTable(customersData, "__SPNS__customerListTable");
 });

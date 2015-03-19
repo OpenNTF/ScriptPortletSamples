@@ -74,7 +74,7 @@ function displayDataTable(tableId) {
 				// running within a portal context
 				if (error.message.toString().indexOf("ERR0001:") != 0)
 					alert(error.name + "\n" + error.message);
-			});
+			});so I 
 }
 
 // Function called by jQuery when DOM has finished loading - display list of

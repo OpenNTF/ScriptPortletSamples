@@ -24,10 +24,7 @@ var wcmTagsSampleData= [
 	["Portlet Namespace", "[Plugin:Portlet key="namespace"]", "A unique identifier for this portlet/page" ],
 	["Locale", "[Plugin:Locale]", "Current rendering locale" ],
 	["Display only in page edit mode", "[Plugin:PageMode pageMode="EDIT"]Edit mode is ON[/Plugin:PageMode]", "The value column is only shown when this page is in edit mode." ],
-	["Display only on an IPad","[Plugin:ifDevice class="iOS"][Plugin:ifDevice class="tablet"]iOS tablet only[/Plugin:ifDevice][/Plugin:ifDevice]", "The value column is only shown when this page is displayed on a IPad" ],
-	["Display only on a tablet","[Plugin:ifDevice class="tablet"]Tablet only[/Plugin:ifDevice]","The value column is only shown when this page is displayed on a tablet." ],
-	["Display only on a smartphone","[Plugin:ifDevice class="smartphone"]Smartphone only[/Plugin:ifDevice]", "The value column is only shown when this page is displayed on a smartphone." ],
-	["Display only on a desktop","[Plugin:ifDevice class=""]Desktop only[/Plugin:ifDevice]", "The value column is only shown when this page is displayed on a tablet." ]
+	["Display only on an this type of device","[Plugin:ifDevice class=""]Desktop device[/Plugin:ifDevice][Plugin:ifDevice class="smartphone"]Smartphone device[/Plugin:ifDevice][Plugin:ifDevice class="tablet"]Tablet not iOS[/Plugin:ifDevice][Plugin:ifDevice class="iOS"][Plugin:ifDevice class="tablet"]iOS tablet[/Plugin:ifDevice][/Plugin:ifDevice]", "The value column shows the device type." ]
 	];
 
 </script>

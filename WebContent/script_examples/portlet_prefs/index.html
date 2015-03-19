@@ -26,40 +26,40 @@
 	<div>
 		<h2 class="blockHeading">Portlet Preferences Sample</h2>
 	</div>
-	<button class="hide_in_view_mode" id="__SPNS__showPrefDialog"
+	<button class="hide_in_view_mode" id="showPrefDialog"
 		value="Set Preference" style="margin-bottom: 15px;">Settings</button>
 
-	<div id="__SPNS__prefDialog">
+	<div id="prefDialog">
 		<form>
-			<input type="checkbox" id="__SPNS__idCol" value="id">ID<br> <input
-				type="checkbox" id="__SPNS__nameCol">Name<br> <input
-				type="checkbox" id="__SPNS__balanceCol">Balance<br> <input
-				type="checkbox" id="__SPNS__cityCol">City<br> <input
-				type="checkbox" id="__SPNS__phoneCol">Phone<br> <input
-				type="checkbox" id="__SPNS__statusCol">Status<br> <input
-				type="checkbox" id="__SPNS__updatedCol">Updated<br> <input
-				type="checkbox" id="__SPNS__addressCol">Address<br> <br>
-			<button type="button" id="__SPNS__setPreference" name="setPreference">Save</button>
-			<button type="button" id="__SPNS__cancelPreference" name="cancelPreference">Cancel</button>
+			<input type="checkbox" id="idCol" value="id">ID<br> <input
+				type="checkbox" id="nameCol">Name<br> <input
+				type="checkbox" id="balanceCol">Balance<br> <input
+				type="checkbox" id="cityCol">City<br> <input
+				type="checkbox" id="phoneCol">Phone<br> <input
+				type="checkbox" id="statusCol">Status<br> <input
+				type="checkbox" id="updatedCol">Updated<br> <input
+				type="checkbox" id="addressCol">Address<br> <br>
+			<button type="button" id="setPreference" name="setPreference">Save</button>
+			<button type="button" id="cancelPreference" name="cancelPreference">Cancel</button>
 		</form>
 	</div>
 
 
-	<table class="dataTable" id="__SPNS__customerListTable">
+	<table class="dataTable" id="customerListTable">
 		<thead>
 			<tr>
-				<th id="__SPNS__idHeader">ID</th>
-				<th id="__SPNS__nameHeader">Name</th>
-				<th id="__SPNS__balanceHeader">Balance</th>
-				<th id="__SPNS__cityHeader">City</th>
-				<th id="__SPNS__phoneHeader">Phone</th>
-				<th id="__SPNS__statusHeader">Status</th>
-				<th id="__SPNS__updatedHeader">Updated</th>
-				<th id="__SPNS__addressHeader">Address</th>
+				<th id="idHeader">ID</th>
+				<th id="nameHeader">Name</th>
+				<th id="balanceHeader">Balance</th>
+				<th id="cityHeader">City</th>
+				<th id="phoneHeader">Phone</th>
+				<th id="statusHeader">Status</th>
+				<th id="updatedHeader">Updated</th>
+				<th id="addressHeader">Address</th>
 			</tr>
 		</thead>
 		<!-- tbody is populated by JS code
-    <tbody id="__SPNS__customerList">
+    <tbody id="customerList">
 	</tbody>
 	 -->
 	</table>
@@ -72,7 +72,7 @@
   to generate actual WCM URLs to the content item elements at render time.
 -->
 	<div style="display: none">
-		<a id="__SPNS__customerDataJsonUrl" href="json/customerData.json"></a>
+		<a id="customerDataJsonUrl" href="json/customerData.json"></a>
 	</div>
 </body>
 </html>
