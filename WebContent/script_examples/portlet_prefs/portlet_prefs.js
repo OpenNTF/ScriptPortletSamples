@@ -11,6 +11,7 @@
  *  they match the names of the variables in our JSON file
  *  we use these later to hide columns and get the values
  */
+var __SPNS__spInstance=__SPNS__spHelper;
 var columnNames = [ 'id', 'name', 'balance', 'city', 'phone', 'status',
 		'updated', 'address' ];
 
@@ -27,7 +28,7 @@ function getPreferences(dataset) {
 
 // here we get the preference values to see which columns are visible
 // and loop through the JSON to get the values and add them to the table
-function displayDataTable(tableId) {
+function __SPNS__displayDataTable(tableId) {
 	var scriptPref = [];
 	// here we call the get portlet preference function which returns a Promise
 	// object
@@ -38,7 +39,7 @@ function displayDataTable(tableId) {
 	// is not available which happens when the page is displayed in the editor's
 	// preview
 	// or the theme doesn't include wp_client_ext capability
-	spInstance.getPortletPreferences().then(
+	__SPNS__spInstance.getPortletPreferences().then(
 			function(dataset) {
 				scriptPref = getPreferences(dataset);
 				var arrayLength = scriptPref.length;
@@ -74,7 +75,7 @@ function displayDataTable(tableId) {
 				// running within a portal context
 				if (error.message.toString().indexOf("ERR0001:") != 0)
 					alert(error.name + "\n" + error.message);
-			});so I 
+			});
 }
 
 // Function called by jQuery when DOM has finished loading - display list of
@@ -95,7 +96,7 @@ $(document).ready(function() {
 		// is not available which happens when the page is displayed in the
 		// editor's preview
 		// or the theme doesn't include wp_client_ext capability
-		spInstance.getPortletPreferences().then(function(dataset) {
+		__SPNS__spInstance.getPortletPreferences().then(function(dataset) {
 			scriptPref = getPreferences(dataset);
 			var arrayLength = columnNames.length;
 			for (var i = 0; i < arrayLength; i++) {
@@ -123,7 +124,7 @@ $(document).ready(function() {
 			var colId = "#__SPNS__" + columnNames[i] + "Col"
 			preferences[i] = "" + $(colId).prop('checked');
 		}
-		spInstance.setPortletPreferences(preferences).then(function(result) {
+		__SPNS__spInstance.setPortletPreferences(preferences).then(function(result) {
 			$('#__SPNS__prefDialog').dialog('close');
 			window.top.location.reload();
 		}, function(error) {
@@ -140,5 +141,5 @@ $(document).ready(function() {
 		$('#__SPNS__prefDialog').dialog('close');
 	});
 	// display the table passing in the id of the table element
-	displayDataTable("customerListTable");
+	__SPNS__displayDataTable("customerListTable");
 });
