@@ -17,6 +17,7 @@ Build file for creating Zip Archive
 		<property name="webcontent.dir" value="${build.dir}/WebContent" />
 		<property name="webinf.dir" value="${webcontent.dir}/WEB-INF" />
 		<property name="documentation.dir" value="${build.dir}/documentation" />
+		<property name="angular_contacts_zip.file" value="${samplesdist.dir}/angular_contacts.zip" />
 		<property name="event_source_zip.file" value="${samplesdist.dir}/event_source.zip" />
 		<property name="event_target_zip.file" value="${samplesdist.dir}/event_target.zip" />
 		<property name="hello_world_zip.file" value="${samplesdist.dir}/hello_world.zip" />
@@ -65,12 +66,21 @@ Build file for creating Zip Archive
 		<copy todir="${samplesdist.dir}">
 			<fileset dir="${webcontent.dir}/script_examples"/>
 		</copy>
+		<zip destfile="${angular_contacts_zip.file}">
+			<zipfileset dir="${webcontent.dir}/script_examples/angular_contacts">
+				<include name="*.*" />
+				<include name="**/css/*.*" />
+				<include name="**/data/*.*" />
+				<include name="**/js/*.*" />
+				<include name="**/partials/*.*" />
+			</zipfileset>
+		</zip>
+
 		<zip destfile="${event_source_zip.file}">
 			<zipfileset dir="${webcontent.dir}/script_examples/event_source">
 				<include name="*.*" />
 			</zipfileset>
 		</zip>
-
 		<zip destfile="${event_target_zip.file}">
 			<zipfileset dir="${webcontent.dir}/script_examples/event_target">
 				<include name="*.*" />
